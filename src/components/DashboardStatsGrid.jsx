@@ -3,9 +3,9 @@ import { IoBagHandle, IoCash, IoPeople } from "react-icons/io5";
 /* eslint-disable react/prop-types */
 function DashboardStatsGrid() {
   return (
-    <div className="flex gap-4 w-full">
+    <div className="flex flex-wrap gap-4 w-full">
       <BoxWrapper color="bg-green-400">
-        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-green-500">
+        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-green-500 transition-transform transform hover:scale-105">
           <IoBagHandle className="text-2xl text-white" />
         </div>
         <div className="pl-4">
@@ -18,7 +18,7 @@ function DashboardStatsGrid() {
       </BoxWrapper>
 
       <BoxWrapper color="bg-red-400">
-        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-red-500">
+        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-red-500 transition-transform transform hover:scale-105">
           <IoCash className="text-2xl text-white" />
         </div>
         <div className="pl-4">
@@ -35,7 +35,7 @@ function DashboardStatsGrid() {
       </BoxWrapper>
 
       <BoxWrapper color="bg-blue-400">
-        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-blue-500">
+        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-blue-500 transition-transform transform hover:scale-105">
           <IoPeople className="text-2xl text-white" />
         </div>
         <div className="pl-4">
@@ -50,7 +50,7 @@ function DashboardStatsGrid() {
       </BoxWrapper>
 
       <BoxWrapper color="bg-sky-400">
-        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-sky-500">
+        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-sky-500 transition-transform transform hover:scale-105">
           <IoBagHandle className="text-2xl text-white" />
         </div>
         <div className="pl-4">
@@ -72,7 +72,7 @@ export default DashboardStatsGrid;
 function BoxWrapper({ children, color }) {
   return (
     <div
-      className={`rounded-sm p-4 flex-1 border border-gray-200 flex items-center ${color}`}
+      className={`rounded-sm p-4 flex-1 border border-gray-200 flex items-center shadow hover:shadow-lg transition-shadow duration-200 ${color}`}
     >
       {children}
     </div>

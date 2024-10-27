@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Legend,
   Bar,
@@ -24,6 +25,19 @@ const data = [
   { Name: "Dec", Expense: 4000, Income: 2000 },
 ];
 
+function CustomTooltip({ active, payload }) {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white border border-gray-200 p-2 rounded shadow-lg">
+        <p className="font-semibold">{`Month: ${payload[0].payload.Name}`}</p>
+        <p className="text-blue-600">{`Income: $${payload[0].value}`}</p>
+        <p className="text-orange-600">{`Expense: $${payload[1].value}`}</p>
+      </div>
+    );
+  }
+  return null;
+}
+
 function TransactionChart() {
   return (
     <div className="h-96 w-full bg-white p-4 rounded-sm border border-gray-200 flex flex-col">
@@ -32,12 +46,12 @@ function TransactionChart() {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
-            margin={{ top: 20, right: 10, left: 0, bottom: 0 }}
+            margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="Name" />
             <YAxis />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip />} />
             <Legend />
             <Bar dataKey="Income" fill="#0ea5e9" />
             <Bar dataKey="Expense" fill="#ea580c" />
