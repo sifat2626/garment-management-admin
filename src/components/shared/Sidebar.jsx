@@ -8,7 +8,7 @@ import { HiOutlineLogout } from "react-icons/hi";
 
 function Sidebar() {
   return (
-    <div className="bg-neutral-900 flex flex-col text-neutral-100 w-60">
+    <div className="bg-neutral-900 flex flex-col text-neutral-100 w-60 xl:w-72">
       <div className="flex items-center gap-2 px-1 py-3">
         <FcBullish fontSize={24} />
         <span className="text-neutral-100 text-lg">GShopIn</span>
