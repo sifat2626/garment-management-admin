@@ -10,7 +10,7 @@ function Dashboard() {
         <div className="flex-1 min-w-[300px]">
           <TransactionChart />
         </div>
-        <div className="flex-1 min-w-[300px]">
+        <div className="min-w-[300px]">
           <BuyerProfileChart />
         </div>
       </div>
