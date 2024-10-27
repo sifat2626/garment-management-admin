@@ -28,13 +28,6 @@ const productsData = [
     image: "https://i.ibb.co/2vmRRsk/sweater-1.jpg", // Garment Image
     description: "Cozy knit sweater.",
   },
-  {
-    id: "P005",
-    name: "Dress",
-    price: 59.99,
-    image: "https://i.ibb.co/02GkFct/dress-1.jpg", // Garment Image
-    description: "Elegant summer dress.",
-  },
 ];
 
 function Products() {
