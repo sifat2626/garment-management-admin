@@ -4,7 +4,7 @@ import Header from "../components/shared/Header";
 
 function Root() {
   return (
-    <div className="flex flex-row min-h-screen max-w-screen bg-neutral-100 overflow-hidden font-inter">
+    <div className="flex flex-row min-h-screen max-w-screen bg-neutral-100  font-inter">
       <Sidebar />
       <div className="flex-1">
         <Header />

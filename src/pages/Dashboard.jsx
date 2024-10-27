@@ -4,7 +4,7 @@ import TransactionChart from "../components/TransactionChart";
 
 function Dashboard() {
   return (
-    <div className="flex flex-col gap-4 w-full overflow-hidden">
+    <div className="flex flex-col gap-4 w-screen">
       <DashboardStatsGrid />
       <div className="flex flex-row gap-4">
         <TransactionChart />
